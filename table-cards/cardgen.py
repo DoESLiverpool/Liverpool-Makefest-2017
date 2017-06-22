@@ -44,6 +44,7 @@ def main():
         reader = csv.DictReader(csvfile)
         i = 1
         for row in reader:
+            #print(row.keys())
             # generate the required variables to substitute into the SVG
             filesafe_name = re.sub(r"[^\w\s]", '', row['{title}'])
             filesafe_name = re.sub(r"\s+", '-', filesafe_name)
